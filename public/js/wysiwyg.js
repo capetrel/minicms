@@ -1,0 +1,15 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/*!*********************************!*\
+  !*** ./resources/js/wysiwyg.js ***!
+  \*********************************/
+eval("$('#editor').trumbowyg({\n  lang: 'fr',\n  btns: [['viewHTML'], ['undo', 'redo'], // Only supported in Blink browsers\n  ['formatting'], ['strong', 'italic', 'del'], ['superscript', 'subscript'], ['link'], ['insertImage'], ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'], ['unorderedList', 'orderedList'], ['horizontalRule'], ['removeformat'], ['fullscreen']],\n  autogrow: true\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvd3lzaXd5Zy5qcz84YjRiIl0sIm5hbWVzIjpbIiQiLCJ0cnVtYm93eWciLCJsYW5nIiwiYnRucyIsImF1dG9ncm93Il0sIm1hcHBpbmdzIjoiQUFBQUEsQ0FBQyxDQUFDLFNBQUQsQ0FBRCxDQUFhQyxTQUFiLENBQXVCO0FBQ25CQyxFQUFBQSxJQUFJLEVBQUUsSUFEYTtBQUVuQkMsRUFBQUEsSUFBSSxFQUFFLENBQ0YsQ0FBQyxVQUFELENBREUsRUFFRixDQUFDLE1BQUQsRUFBUyxNQUFULENBRkUsRUFFZ0I7QUFDbEIsR0FBQyxZQUFELENBSEUsRUFJRixDQUFDLFFBQUQsRUFBVyxRQUFYLEVBQXFCLEtBQXJCLENBSkUsRUFLRixDQUFDLGFBQUQsRUFBZ0IsV0FBaEIsQ0FMRSxFQU1GLENBQUMsTUFBRCxDQU5FLEVBT0YsQ0FBQyxhQUFELENBUEUsRUFRRixDQUFDLGFBQUQsRUFBZ0IsZUFBaEIsRUFBaUMsY0FBakMsRUFBaUQsYUFBakQsQ0FSRSxFQVNGLENBQUMsZUFBRCxFQUFrQixhQUFsQixDQVRFLEVBVUYsQ0FBQyxnQkFBRCxDQVZFLEVBV0YsQ0FBQyxjQUFELENBWEUsRUFZRixDQUFDLFlBQUQsQ0FaRSxDQUZhO0FBZ0JuQkMsRUFBQUEsUUFBUSxFQUFFO0FBaEJTLENBQXZCIiwic291cmNlc0NvbnRlbnQiOlsiJCgnI2VkaXRvcicpLnRydW1ib3d5Zyh7XG4gICAgbGFuZzogJ2ZyJyxcbiAgICBidG5zOiBbXG4gICAgICAgIFsndmlld0hUTUwnXSxcbiAgICAgICAgWyd1bmRvJywgJ3JlZG8nXSwgLy8gT25seSBzdXBwb3J0ZWQgaW4gQmxpbmsgYnJvd3NlcnNcbiAgICAgICAgWydmb3JtYXR0aW5nJ10sXG4gICAgICAgIFsnc3Ryb25nJywgJ2l0YWxpYycsICdkZWwnXSxcbiAgICAgICAgWydzdXBlcnNjcmlwdCcsICdzdWJzY3JpcHQnXSxcbiAgICAgICAgWydsaW5rJ10sXG4gICAgICAgIFsnaW5zZXJ0SW1hZ2UnXSxcbiAgICAgICAgWydqdXN0aWZ5TGVmdCcsICdqdXN0aWZ5Q2VudGVyJywgJ2p1c3RpZnlSaWdodCcsICdqdXN0aWZ5RnVsbCddLFxuICAgICAgICBbJ3Vub3JkZXJlZExpc3QnLCAnb3JkZXJlZExpc3QnXSxcbiAgICAgICAgWydob3Jpem9udGFsUnVsZSddLFxuICAgICAgICBbJ3JlbW92ZWZvcm1hdCddLFxuICAgICAgICBbJ2Z1bGxzY3JlZW4nXVxuICAgIF0sXG4gICAgYXV0b2dyb3c6IHRydWVcbn0pO1xuIl0sImZpbGUiOiIuL3Jlc291cmNlcy9qcy93eXNpd3lnLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/wysiwyg.js\n");
+/******/ })()
+;
