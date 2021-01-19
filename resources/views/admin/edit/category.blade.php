@@ -26,7 +26,7 @@
 
                         @include('blocks.messages')
 
-                        {!! Form::open( ['url' => route('update-cat', ['pages'=>$page, 'id'=>$id]),'method' => 'post'] ) !!}
+                        {!! Form::open( ['url' => route('update-cat', ['page'=>$page, 'id'=>$id]),'method' => 'post'] ) !!}
 
                         @foreach($category as $item)
 
@@ -54,7 +54,7 @@
 
                             <div class="form-group">
                                 {!! Form::submit('Enregistrer', ['class'=>'btn btn-primary']) !!}
-                                <a class="btn btn-secondary" title="retour à la page précédente" href="{{ route('page', ['pages'  => $page]) }}">Annuler</a>
+                                <a class="btn btn-secondary" title="retour à la page précédente" href="{{ route('page', ['page'  => $page]) }}">Annuler</a>
                             </div>
 
                         @endforeach
