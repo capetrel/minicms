@@ -1,3 +1,5 @@
+import Siema from 'siema';
+
 function setParams(selector){
     return {
         selector: selector,

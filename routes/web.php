@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\MediasController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\WelcomeController;
@@ -64,3 +65,6 @@ Route::get('/admin/{page}/add/cat', [CategoriesController::class, 'form'])->name
 Route::post('/admin/{page}/add/cat', [CategoriesController::class, 'add'])->name('save-cat');
 
 Route::post('/admin/{page}/del/cat/{id}', [CategoriesController::class, 'del'])->where('id', '[0-9]+')->name('del-cat');
+
+/* Catch upload file request */
+Route::post('/admin/image/upload', [FileController::class, 'postResizeImage'])->name('upload-image');

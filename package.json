@@ -23,6 +23,7 @@
     "dependencies": {
         "bootstrap": "^4.5.3",
         "flatpickr": "^4.6.9",
+        "siema": "^1.5.1",
         "trumbowyg": "^2.23.0"
     }
 }
