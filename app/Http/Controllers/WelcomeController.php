@@ -11,7 +11,6 @@ class WelcomeController extends Controller
         $text = Page::choosePageText('presentation');
         $head_title = Page::currentPageTitle('presentation');
 
-        // dd($head_title);
         return view('welcome', compact('text', 'head_title'));
     }
 

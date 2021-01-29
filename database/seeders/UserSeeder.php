@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'name' => 'adminefil',
             'email' => 'capetrelluzzi@efil.fr',
             'email_verified_at' => null,
-            'password' => '$2y$10$WrA491vh1AjYfQUFf35Fo.3CCyhFm6aOCiCrJS.nqhR...',
+            'password' => Hash::make('@Efil-321'),
             'remember_token' => null,
         ]);
     }

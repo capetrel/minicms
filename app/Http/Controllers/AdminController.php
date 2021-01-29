@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Config;
 use App\Models\Page;
 use App\Models\Media;
 use App\Models\User;
@@ -28,8 +29,13 @@ class AdminController extends Controller
      */
     public function index()
     {
+        $site_config = Config::getConfig();
         $user_data = User::getUserInfo(Auth::id());
-        return view('admin.home', compact('user_data'));
+        $edit_pages = [
+            'edit_page' => 'page',
+            'edit_user' => 'user',
+        ];
+        return view('admin.home', compact('user_data', 'site_config', 'edit_pages'));
     }
 
     public function show($page)

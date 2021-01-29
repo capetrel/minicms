@@ -13,6 +13,7 @@ class FileController extends Controller {
 
     public function postResizeImage(Request $request)
     {
+
         $this->validate($request, [
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -29,5 +30,11 @@ class FileController extends Controller {
         return back()
             ->with('success','Image Upload successful')
             ->with('imagename',$imagename);
+    }
+
+    public function postEditorImage(Request $request) {
+
+        dd($request);
+
     }
 }

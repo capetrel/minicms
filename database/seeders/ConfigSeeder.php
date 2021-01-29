@@ -14,7 +14,7 @@ class ConfigSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('config')->insert([
+        DB::table('configs')->insert([
             'site_name' => 'Super Site',
             'site_slogan' => 'Mon super site',
             'site_url' => 'http://localhost',
