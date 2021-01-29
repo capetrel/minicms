@@ -11,8 +11,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="{{ asset('css/vendor/iconic/fonts/open-iconic-bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/master.min.css') }}" rel="stylesheet">
+    @if (env('APP_ENV') == 'local')
+        <link rel="stylesheet" href="{{ asset('css/master.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('css/master.min.css') }}">
+    @endif
+
     @stack('css')
 
 </head>

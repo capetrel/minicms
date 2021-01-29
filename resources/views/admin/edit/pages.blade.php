@@ -3,7 +3,11 @@
 @section('content')
 
     @push('css')
-        <link rel="stylesheet" href="{{ asset('css/wysiwyg.min.css') }}">
+        @if (env('APP_ENV') == 'local')
+            <link rel="stylesheet" href="{{ asset('css/wysiwyg.css') }}">
+        @else
+            <link rel="stylesheet" href="{{ asset('css/wysiwyg.min.css') }}">
+        @endif
     @endpush
 
     <div class="container">
@@ -101,9 +105,6 @@
     </div>
 
     @push('scripts')
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="{{ asset('js/vendor/trumbowyg.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/vendor/langs/fr.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/wysiwyg.js') }}"></script>
     @endpush
 

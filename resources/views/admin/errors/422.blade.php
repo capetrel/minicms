@@ -24,7 +24,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="{{ asset('css/vendor/iconic/fonts/open-iconic-bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
     @stack('css')
 

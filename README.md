@@ -14,10 +14,10 @@ php artisan migrate
 
 Puis lancer les seeder dans l'ordre suivant :
 ```shell
-php artisan db:seeder --class=ConfigSeeder
-php artisan db:seeder --class=UserSeeder
-php artisan db:seeder --class=CategorySeeder
-php artisan db:seeder --class=PageAndMediaSeeder
+php artisan db:seed --class=ConfigSeeder
+php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=CategorySeeder
+php artisan db:seed --class=PageAndMediaSeeder
 ```
 
 Enfin décommentées les lignes 21 à 27 dans le fichier app/Providers/AppServiceProvider.php C'est ce qui va permettre de générer le menu de navigation.

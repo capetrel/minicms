@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.disableSuccessNotifications()
+    .copyDirectory('resources/fonts', 'public/fonts')
     .sass('resources/sass/main.scss', 'public/css')
     .sass('resources/sass/master.scss', 'public/css')
     .sass('resources/sass/slider.scss', 'public/css')
@@ -23,9 +24,5 @@ mix.disableSuccessNotifications()
     .js('resources/js/datepicker.js', 'public/js')
     .js('resources/js/wysiwyg.js', 'public/js')
     .sourceMaps()
-    .browserSync('http://laravel8.test');
+    .browserSync('http://laravel.test');
 
-/*mix.js('resources/js/main.js', 'public/js')
-    .postCss('resources/css/main.css', 'public/css', [
-        //
-    ]);*/
