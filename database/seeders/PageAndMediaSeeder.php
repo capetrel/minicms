@@ -32,6 +32,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'presentation',
             'menu_name' => 'Présentation',
             'head_title' => $this->faker->text(38),
+            'head_meta_keywords' => 'keyword1, keyword2, keyword3, keyword4',
+            'head_meta_description' => 'Page de présentation du site',
             'text' => $this->faker->text(1500),
         ]);
 
@@ -39,6 +41,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'medias',
             'menu_name' => 'Médias',
             'head_title' => $this->faker->text(50),
+            'head_meta_keywords' => 'keyword1, keyword2, keyword3, keyword4',
+            'head_meta_description' => 'Page des médias',
             'text' => $this->faker->text(1200),
         ]);
 
@@ -46,6 +50,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'contact',
             'menu_name' => 'Contact',
             'head_title' => $this->faker->text(10),
+            'head_meta_keywords' => 'keyword1, keyword2, keyword3, keyword4',
+            'head_meta_description' => 'Page de contact',
             'text' => $this->faker->text(300),
         ]);
 
@@ -53,6 +59,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'login',
             'menu_name' => 'Maître',
             'head_title' => $this->faker->text(20),
+            'head_meta_keywords' => null,
+            'head_meta_description' => null,
             'text' => $this->faker->text(200),
         ]);
 
@@ -60,6 +68,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'mentions',
             'menu_name' => 'Mentions',
             'head_title' => $this->faker->text(30),
+            'head_meta_keywords' => 'keyword1, keyword2',
+            'head_meta_description' => 'Page des mentions légales',
             'text' => $this->faker->text(2000),
         ]);
 
@@ -67,6 +77,8 @@ class PageAndMediaSeeder extends Seeder
             'url_name' => 'sitemap',
             'menu_name' => 'Sitemap',
             'head_title' => $this->faker->text(40),
+            'head_meta_keywords' => 'keyword1',
+            'head_meta_description' => 'Page plan du site',
             'text' => $this->faker->text(500),
         ]);
 

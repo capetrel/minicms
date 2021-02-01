@@ -18,6 +18,8 @@ class CreatePagesTable extends Migration
             $table->text('url_name');
             $table->text('menu_name');
             $table->text('head_title')->nullable();
+            $table->longText('head_meta_keywords')->nullable();
+            $table->longText('head_meta_description')->nullable();
             $table->longText('text')->nullable();
             $table->timestamps();
         });

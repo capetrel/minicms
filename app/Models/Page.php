@@ -56,7 +56,7 @@ class Page extends Model
     {
 
         return DB::table('pages')
-            ->select('url_name', 'menu_name', 'head_title', 'text')
+            ->select('url_name', 'menu_name', 'head_title', 'head_meta_keywords', 'head_meta_description', 'text')
             ->where('url_name', '=', $page_name)
             ->get();
     }
@@ -65,7 +65,7 @@ class Page extends Model
     {
 
         return DB::table('pages')
-            ->select('pages.id','url_name', 'menu_name', 'head_title', 'text', 'menu_order')
+            ->select('pages.id','url_name', 'menu_name', 'head_title', 'head_meta_keywords', 'head_meta_description', 'text', 'menu_order')
             ->join('menus', 'pages.id', '=', 'menus.page_id')
             ->where('url_name', '=', $page_name)
             ->get();
@@ -86,11 +86,13 @@ class Page extends Model
             ->where('url_name', $page)
             ->join('menus', 'pages.id', '=', 'menus.page_id')
             ->update([
-                'url_name'      => $data['url_name'],
-                'menu_name'     => $data['menu_name'],
-                'head_title'    => $data['head_title'],
-                'text'          => $data['text'],
-                'menu_order'    => $data['menu_order'],
+                'url_name'              => $data['url_name'],
+                'menu_name'             => $data['menu_name'],
+                'head_title'            => $data['head_title'],
+                'head_meta_keywords'    => $data['head_meta_keywords'],
+                'head_meta_description' => $data['head_meta_description'],
+                'text'                  => $data['text'],
+                'menu_order'            => $data['menu_order'],
             ]);
     }
 }
