@@ -4,6 +4,7 @@
     "/js/slider.js": "/js/slider.js",
     "/js/datepicker.js": "/js/datepicker.js",
     "/js/wysiwyg.js": "/js/wysiwyg.js",
+    "/css/wysiwyg.css": "/css/wysiwyg.css",
     "/css/datepicker.css": "/css/datepicker.css",
     "/css/slider.css": "/css/slider.css",
     "/css/master.css": "/css/master.css",
@@ -13,6 +14,5 @@
     "/fonts/NunitoSans-BoldItalic.ttf": "/fonts/NunitoSans-BoldItalic.ttf",
     "/fonts/NunitoSans-Italic.ttf": "/fonts/NunitoSans-Italic.ttf",
     "/fonts/NunitoSans-Light.ttf": "/fonts/NunitoSans-Light.ttf",
-    "/fonts/NunitoSans-Regular.ttf": "/fonts/NunitoSans-Regular.ttf",
-    "/css/wysiwyg.css": "/css/wysiwyg.css"
+    "/fonts/NunitoSans-Regular.ttf": "/fonts/NunitoSans-Regular.ttf"
 }

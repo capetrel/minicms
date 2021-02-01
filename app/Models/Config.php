@@ -16,4 +16,17 @@ class Config extends Model
             ->select('*')
             ->first();
     }
+
+    public static function updateConfig($datas, $id)
+    {
+        return DB::table('configs')
+            ->where('id', $id)
+            ->update([
+                'site_name'          => $datas['site_name'],
+                'site_slogan'        => $datas['site_slogan'],
+                'site_url'           => $datas['site_url'],
+                'site_keywords'      => $datas['site_keywords'],
+                'site_description'   => $datas['site_description'],
+            ]);
+    }
 }

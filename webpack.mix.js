@@ -24,5 +24,5 @@ mix.disableSuccessNotifications()
     .js('resources/js/datepicker.js', 'public/js')
     .js('resources/js/wysiwyg.js', 'public/js')
     .sourceMaps()
-    .browserSync('http://laravel.test');
+    .browserSync('http://laravel8.test');
 

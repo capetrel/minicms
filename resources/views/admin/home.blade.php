@@ -51,7 +51,7 @@
                         </p>
 
                         <p class="card-text">
-                            <strong>Slogan :</strong><br>
+                            <strong>url :</strong><br>
                             {{ $site_config->site_url }}
                         </p>
 
@@ -64,7 +64,9 @@
                             <strong>Contenu de la balise meta "description":</strong><br>
                             {{ $site_config->site_description }}
                         </p>
-
+                        <a href="{{ route('edit-config') }}" class="btn btn-info">
+                            <span class="oi oi-pencil" aria-hidden="true" title="modifier la configuration">Modifier</span>
+                        </a>
                     </div>
                 </div>
                 <br>
