@@ -57,9 +57,7 @@ class AdminController extends Controller
 
     public function update(PagesFormRequest $request, $page)
     {
-
         $data = $request->all();
-
         try{
 
             Page::updatePage($data, $page);

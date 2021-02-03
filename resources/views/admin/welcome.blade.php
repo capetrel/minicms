@@ -26,10 +26,10 @@
 
                             @foreach($page_content as $content)
                                 <h5 class="card-title" >Titre de la page : {!! $content->menu_name  !!}</h5>
-                                <p class="card-text">
+                                <div class="card-text">
                                     <strong>Description de la page :</strong> {!! $content->head_title  !!}<br>
                                     {!! $content->text ? $content->text : "Il n'y a pas de textes pour cette page"  !!}
-                                </p>
+                                </div>
                             @endforeach
 
                             <a class="btn btn-primary" href="{{ route( 'edit-page', ['page' => $page]) }}">

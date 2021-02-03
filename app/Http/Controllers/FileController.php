@@ -1,10 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
+use http\Client\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Image;
 
 class FileController extends Controller {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function getResizeImage()
     {
@@ -32,9 +44,49 @@ class FileController extends Controller {
             ->with('imagename',$imagename);
     }
 
-    public function postEditorImage(Request $request) {
+    public function postWysiwygImage(Request $request) {
 
-        dd($request);
+        $public_path = 'img/editor/images/';
+        $this->validate($request, [
+            'file-0' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $destinationPath = public_path($public_path);
+        $file = $request->file('file-0');
+        $storedFilename = $file->getClientOriginalName();
+        $fileSize = $file->getSize();
+        $file->move($destinationPath, $storedFilename);
+        return response()->json([
+            'result' => [
+                [
+                    'name' => $storedFilename,
+                    'size' => $fileSize,
+                    'url' => url('/') . DIRECTORY_SEPARATOR . $public_path . $storedFilename,
+                ]
+            ]
+        ]);
+    }
+
+    public function gallery()
+    {
+        $data = [];
+        $urlPath = DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'editor' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR;
+        $editorPath = public_path() . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'editor';
+        $dirContent = scandir($editorPath . DIRECTORY_SEPARATOR . 'images');
+        $imageList = array_diff($dirContent, array('..', '.'));
+         if (!empty($imageList)) {
+             $data["statusCode"] =  200;
+             foreach ($imageList as $img) {
+                $fileInfo = pathinfo($editorPath . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR . $img);
+                $fileName = ucfirst($fileInfo['filename']);
+                $data["result"][]= ["src"=> $urlPath . $fileInfo['basename'], "name"=> $fileName, "alt"=> $fileName, "tag"=> "Image"];
+             }
+         } else {
+             $data["statusCode"]=  200;
+             $data["errorMessage"]=  'Pas de image';
+         }
+
+        return \response()->json($data);
 
     }
+
 }

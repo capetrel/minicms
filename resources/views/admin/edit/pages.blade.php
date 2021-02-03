@@ -60,7 +60,6 @@
                                 </div>
                             </div>
 
-
                             <div class="form-group">
                                 {!! Form::label('url_name', 'Nom de la page dans l\'url : *') !!}
                                 <em> ( Pas d'accents, ni majuscule, ni tiret bas ) </em>
@@ -100,7 +99,7 @@
                             <div class="form-group">
                                 {!! Form::label('text', 'Contenu :') !!}
                                 {!! Form::textarea('text', $content->text, [
-                                    'class'=>'form-control',
+                                    'class'=>'form-control sun-editor-editable __se__tag',
                                     'id'=>'editor'
                                     ])
                                 !!}
