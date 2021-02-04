@@ -1,18 +1,18 @@
 {
-    "/js/master.js": "/js/master.js",
     "/js/main.js": "/js/main.js",
     "/js/slider.js": "/js/slider.js",
+    "/js/master.js": "/js/master.js",
     "/js/datepicker.js": "/js/datepicker.js",
     "/js/wysiwyg.js": "/js/wysiwyg.js",
     "/css/wysiwyg.css": "/css/wysiwyg.css",
     "/css/datepicker.css": "/css/datepicker.css",
     "/css/master.css": "/css/master.css",
+    "/css/slider.css": "/css/slider.css",
     "/css/main.css": "/css/main.css",
     "/fonts/NunitoSans-Black.ttf": "/fonts/NunitoSans-Black.ttf",
     "/fonts/NunitoSans-Bold.ttf": "/fonts/NunitoSans-Bold.ttf",
     "/fonts/NunitoSans-BoldItalic.ttf": "/fonts/NunitoSans-BoldItalic.ttf",
     "/fonts/NunitoSans-Italic.ttf": "/fonts/NunitoSans-Italic.ttf",
     "/fonts/NunitoSans-Light.ttf": "/fonts/NunitoSans-Light.ttf",
-    "/fonts/NunitoSans-Regular.ttf": "/fonts/NunitoSans-Regular.ttf",
-    "/css/slider.css": "/css/slider.css"
+    "/fonts/NunitoSans-Regular.ttf": "/fonts/NunitoSans-Regular.ttf"
 }

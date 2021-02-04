@@ -1,8 +1,8 @@
 // Variables
-@import 'admin-variables';
+@import '../admin/admin-variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap';
 
 mark {
     background-color: #5cd08d !important;

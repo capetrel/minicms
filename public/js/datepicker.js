@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/js/admin/datepicker.js":
+/*!******************************************!*\
+  !*** ./resources/js/admin/datepicker.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var flatpickr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flatpickr */ \"./node_modules/flatpickr/dist/esm/index.js\");\n/* harmony import */ var flatpickr_dist_l10n_fr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flatpickr/dist/l10n/fr */ \"./node_modules/flatpickr/dist/l10n/fr.js\");\n/* harmony import */ var flatpickr_dist_l10n_fr__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flatpickr_dist_l10n_fr__WEBPACK_IMPORTED_MODULE_1__);\n__webpack_require__(/*! flatpickr */ \"./node_modules/flatpickr/dist/esm/index.js\");\n\n\n\nflatpickr__WEBPACK_IMPORTED_MODULE_0__.default.localize((flatpickr_dist_l10n_fr__WEBPACK_IMPORTED_MODULE_1___default()));\n(0,flatpickr__WEBPACK_IMPORTED_MODULE_0__.default)(\"#flat-date\", {\n  enableTime: false,\n  altInput: true,\n  altFormat: \"j F Y\",\n  dateFormat: \"Y-m-d\"\n});\n(0,flatpickr__WEBPACK_IMPORTED_MODULE_0__.default)(\"#flat-time\", {\n  enableTime: true,\n  noCalendar: true,\n  dateFormat: \"H:i:s\",\n  time_24hr: true,\n  altInput: true,\n  altFormat: \"H:i\"\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYWRtaW4vZGF0ZXBpY2tlci5qcz83YmYyIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJmbGF0cGlja3IiLCJmcmVuY2giLCJlbmFibGVUaW1lIiwiYWx0SW5wdXQiLCJhbHRGb3JtYXQiLCJkYXRlRm9ybWF0Iiwibm9DYWxlbmRhciIsInRpbWVfMjRociJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBQSxtQkFBTyxDQUFDLDZEQUFELENBQVA7O0FBQ0E7QUFDQTtBQUVBQyx1REFBQSxDQUFtQkMsK0RBQW5CO0FBRUFELGtEQUFTLENBQUMsWUFBRCxFQUFlO0FBQ3BCRSxZQUFVLEVBQUUsS0FEUTtBQUVwQkMsVUFBUSxFQUFFLElBRlU7QUFHcEJDLFdBQVMsRUFBRSxPQUhTO0FBSXBCQyxZQUFVLEVBQUU7QUFKUSxDQUFmLENBQVQ7QUFPQUwsa0RBQVMsQ0FBQyxZQUFELEVBQWU7QUFDcEJFLFlBQVUsRUFBRSxJQURRO0FBRXBCSSxZQUFVLEVBQUUsSUFGUTtBQUdwQkQsWUFBVSxFQUFFLE9BSFE7QUFJcEJFLFdBQVMsRUFBRSxJQUpTO0FBS3BCSixVQUFRLEVBQUUsSUFMVTtBQU1wQkMsV0FBUyxFQUFFO0FBTlMsQ0FBZixDQUFUIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2pzL2FkbWluL2RhdGVwaWNrZXIuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCdmbGF0cGlja3InKTtcbmltcG9ydCBmbGF0cGlja3IgZnJvbSBcImZsYXRwaWNrclwiO1xuaW1wb3J0IGZyZW5jaCBmcm9tICdmbGF0cGlja3IvZGlzdC9sMTBuL2ZyJ1xuXG5mbGF0cGlja3IubG9jYWxpemUoZnJlbmNoKTtcblxuZmxhdHBpY2tyKFwiI2ZsYXQtZGF0ZVwiLCB7XG4gICAgZW5hYmxlVGltZTogZmFsc2UsXG4gICAgYWx0SW5wdXQ6IHRydWUsXG4gICAgYWx0Rm9ybWF0OiBcImogRiBZXCIsXG4gICAgZGF0ZUZvcm1hdDogXCJZLW0tZFwiLFxufSk7XG5cbmZsYXRwaWNrcihcIiNmbGF0LXRpbWVcIiwge1xuICAgIGVuYWJsZVRpbWU6IHRydWUsXG4gICAgbm9DYWxlbmRhcjogdHJ1ZSxcbiAgICBkYXRlRm9ybWF0OiBcIkg6aTpzXCIsXG4gICAgdGltZV8yNGhyOiB0cnVlLFxuICAgIGFsdElucHV0OiB0cnVlLFxuICAgIGFsdEZvcm1hdDogXCJIOmlcIixcbn0pO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/admin/datepicker.js\n");
+
+/***/ }),
+
 /***/ "./node_modules/flatpickr/dist/esm/index.js":
 /*!**************************************************!*\
   !*** ./node_modules/flatpickr/dist/esm/index.js ***!
@@ -174,12 +185,9 @@ eval("(function (global, factory) {\n   true ? factory(exports) :\n  0;\n}(this,
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-(() => {
-/*!************************************!*\
-  !*** ./resources/js/datepicker.js ***!
-  \************************************/
-eval("__webpack_require__(/*! flatpickr */ \"./node_modules/flatpickr/dist/esm/index.js\");\n\nvar french = __webpack_require__(/*! flatpickr/dist/l10n/fr.js */ \"./node_modules/flatpickr/dist/l10n/fr.js\").default.fr;\n\nflatpickr.localize(french);\nflatpickr(\"#flat-date\", {\n  enableTime: false,\n  altInput: true,\n  altFormat: \"j F Y\",\n  dateFormat: \"Y-m-d\"\n});\nflatpickr(\"#flat-time\", {\n  enableTime: true,\n  noCalendar: true,\n  dateFormat: \"H:i:s\",\n  time_24hr: true,\n  altInput: true,\n  altFormat: \"H:i\"\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvZGF0ZXBpY2tlci5qcz9hNWJmIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJmcmVuY2giLCJmbGF0cGlja3IiLCJsb2NhbGl6ZSIsImVuYWJsZVRpbWUiLCJhbHRJbnB1dCIsImFsdEZvcm1hdCIsImRhdGVGb3JtYXQiLCJub0NhbGVuZGFyIiwidGltZV8yNGhyIl0sIm1hcHBpbmdzIjoiQUFBQUEsbUJBQU8sQ0FBQyw2REFBRCxDQUFQOztBQUNBLElBQU1DLE1BQU0sR0FBR0QsMkdBQWY7O0FBRUFFLFNBQVMsQ0FBQ0MsUUFBVixDQUFtQkYsTUFBbkI7QUFFQUMsU0FBUyxDQUFDLFlBQUQsRUFBZTtBQUNwQkUsWUFBVSxFQUFFLEtBRFE7QUFFcEJDLFVBQVEsRUFBRSxJQUZVO0FBR3BCQyxXQUFTLEVBQUUsT0FIUztBQUlwQkMsWUFBVSxFQUFFO0FBSlEsQ0FBZixDQUFUO0FBT0FMLFNBQVMsQ0FBQyxZQUFELEVBQWU7QUFDcEJFLFlBQVUsRUFBRSxJQURRO0FBRXBCSSxZQUFVLEVBQUUsSUFGUTtBQUdwQkQsWUFBVSxFQUFFLE9BSFE7QUFJcEJFLFdBQVMsRUFBRSxJQUpTO0FBS3BCSixVQUFRLEVBQUUsSUFMVTtBQU1wQkMsV0FBUyxFQUFFO0FBTlMsQ0FBZixDQUFUIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2pzL2RhdGVwaWNrZXIuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCdmbGF0cGlja3InKTtcbmNvbnN0IGZyZW5jaCA9IHJlcXVpcmUoXCJmbGF0cGlja3IvZGlzdC9sMTBuL2ZyLmpzXCIpLmRlZmF1bHQuZnI7XG5cbmZsYXRwaWNrci5sb2NhbGl6ZShmcmVuY2gpO1xuXG5mbGF0cGlja3IoXCIjZmxhdC1kYXRlXCIsIHtcbiAgICBlbmFibGVUaW1lOiBmYWxzZSxcbiAgICBhbHRJbnB1dDogdHJ1ZSxcbiAgICBhbHRGb3JtYXQ6IFwiaiBGIFlcIixcbiAgICBkYXRlRm9ybWF0OiBcIlktbS1kXCIsXG59KTtcblxuZmxhdHBpY2tyKFwiI2ZsYXQtdGltZVwiLCB7XG4gICAgZW5hYmxlVGltZTogdHJ1ZSxcbiAgICBub0NhbGVuZGFyOiB0cnVlLFxuICAgIGRhdGVGb3JtYXQ6IFwiSDppOnNcIixcbiAgICB0aW1lXzI0aHI6IHRydWUsXG4gICAgYWx0SW5wdXQ6IHRydWUsXG4gICAgYWx0Rm9ybWF0OiBcIkg6aVwiLFxufSk7XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/datepicker.js\n");
-})();
-
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./resources/js/admin/datepicker.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;

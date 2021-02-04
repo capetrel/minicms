@@ -5,7 +5,7 @@ let sliders = document.querySelectorAll('.slider').forEach(function (element){
         container: element,
         items: 1,
         slideBy: 'page',
-        center: true,
+        center: false,
         controlsPosition: 'bottom',
         controlsText: ['<', '>'],
         navPosition: "bottom",

@@ -1,5 +1,4 @@
 import suneditor from 'suneditor';
-// import lang from 'suneditor/src/lang';
 import fr from 'suneditor/src/lang/fr'
 import plugins from 'suneditor/src/plugins';
 import CodeMirror from 'codemirror'

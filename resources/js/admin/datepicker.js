@@ -1,5 +1,6 @@
 require('flatpickr');
-const french = require("flatpickr/dist/l10n/fr.js").default.fr;
+import flatpickr from "flatpickr";
+import french from 'flatpickr/dist/l10n/fr'
 
 flatpickr.localize(french);
 
