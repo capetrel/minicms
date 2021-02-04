@@ -9970,6 +9970,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+mark {
+  background-color: #5cd08d !important;
+}
+
 .list-unstyled {
   list-style-type: none;
   margin-left: 5px;

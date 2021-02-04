@@ -44,7 +44,7 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>Administer le contenu</h4>
+                        <h4>Administer le contenu dynamique</h4>
                     </div>
                     <div class="panel-body">
 
@@ -66,7 +66,7 @@
 
                         @else
 
-                            <p>Il n'y a pas de contenu pour cette page.</p>
+                            <p>Il n'y a pas de contenu dynamique pour cette page.</p>
 
                         @endif
 

@@ -1,2 +1,8 @@
 @import '~suneditor/dist/css/suneditor.min.css';
 @import "~codemirror";
+
+#suneditor_editor {
+    mark {
+        background-color: #5cd08d !important;
+    }
+}

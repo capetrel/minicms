@@ -57,14 +57,13 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
 ## TODO
 
 - [x] Vérifier que toutes les routes admin soit couvert par le Auth middleware
 - [x] Inclure la configuration du site dans le tableau de bord
 - [x] remettre de l'ordre dans les assets
 - [x] Inclure L'upload de fichier dans le wysiwyg
-- [ ] Inclure des formats et un css pour le wysiwyg
-- [ ] Dans le backoffice, quand il y a un slug mettre en place une "slugification" automatique (js).
+- [x] Inclure des formats et un css pour le wysiwyg
+- [ ] Ajouter des slider pour la page médias
 - [ ] Dans le backoffice, quand il y a un slug mettre en place une "slugification" automatique (js).
 

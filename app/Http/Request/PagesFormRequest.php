@@ -29,7 +29,7 @@ class PagesFormRequest extends FormRequest
             'url_name' => ['required', new IsSlug()],
             'menu_order' => 'numeric',
             'menu_name' => 'required',
-            'page_meta' => 'required',
+            'head_title' => 'required',
         ];
     }
 
