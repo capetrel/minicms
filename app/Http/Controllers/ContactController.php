@@ -10,9 +10,9 @@ class ContactController extends Controller
     public function contact()
     {
         $text = Page::choosePageText('contact');
-        $head_title= Page::currentPageTitle('contact');
+        $page_meta= Page::currentPageMeta('contact');
 
-        return view('contact', compact('text', 'head_title'));
+        return view('contact', compact('text', 'page_meta'));
     }
 
     public function contactPost(ContactFormRequest $request)

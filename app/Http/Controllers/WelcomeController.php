@@ -9,9 +9,9 @@ class WelcomeController extends Controller
     {
 
         $text = Page::choosePageText('presentation');
-        $head_title = Page::currentPageTitle('presentation');
+        $page_meta = Page::currentPageMeta('presentation');
 
-        return view('welcome', compact('text', 'head_title'));
+        return view('welcome', compact('text', 'page_meta'));
     }
 
 }

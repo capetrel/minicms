@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('head_title', 'Titre de la page :*') !!}
+                                {!! Form::label('page_meta', 'Titre de la page :*') !!}
                                 <em> ( Titre dans l'onglet du navigateur ) </em>
                                 {!! Form::text('head_title', $content->head_title, [
                                     'required',

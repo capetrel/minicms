@@ -7,11 +7,13 @@ use App\Models\Config;
 use App\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class ConfigsController extends Controller
 {
+
     public function edit()
     {
         $config_content = Config::all();

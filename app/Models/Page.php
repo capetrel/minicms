@@ -44,17 +44,16 @@ class Page extends Model
      * @param $page_name
      * @return mixed
      */
-    public static function currentPageTitle($page_name)
+    public static function currentPageMeta($page_name)
     {
         return DB::table('pages')
-            ->select('head_title', 'menu_name')
+            ->select('head_title', 'menu_name', 'head_meta_keywords', 'head_meta_description')
             ->where('url_name', '=', $page_name)
             ->first();
     }
 
     public static function getContent($page_name)
     {
-
         return DB::table('pages')
             ->select('url_name', 'menu_name', 'head_title', 'head_meta_keywords', 'head_meta_description', 'text')
             ->where('url_name', '=', $page_name)
@@ -63,20 +62,10 @@ class Page extends Model
 
     public static function getEditContent($page_name)
     {
-
         return DB::table('pages')
             ->select('pages.id','url_name', 'menu_name', 'head_title', 'head_meta_keywords', 'head_meta_description', 'text', 'menu_order')
             ->join('menus', 'pages.id', '=', 'menus.page_id')
             ->where('url_name', '=', $page_name)
-            ->get();
-    }
-
-    public static function getContentFromId($page_id)
-    {
-
-        return DB::table('pages')
-            ->select('*')
-            ->where('id', '=', $page_id)
             ->get();
     }
 

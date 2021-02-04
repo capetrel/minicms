@@ -13,7 +13,7 @@ class CategoriesController extends Controller
     {
         $categories = Category::getCategories();
 
-        return view('categories', compact('text', 'head_title', 'categories'));
+        return view('categories', compact('text', 'page_meta', 'categories'));
     }
 
     public function edit($page, $id)

@@ -10,6 +10,13 @@ class Config extends Model
 {
     use HasFactory;
 
+    public static function getSiteMeta(int $id) {
+        return DB::table('configs')
+            ->select('site_url', 'site_keywords', 'site_description')
+            ->where('id', '=', $id)
+            ->first();
+    }
+
     public static function getConfig()
     {
         return DB::table('configs')

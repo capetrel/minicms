@@ -9,17 +9,17 @@ class PagesController extends Controller
     public function mentions()
     {
         $text = Page::choosePageText('mentions');
-        $head_title = Page::currentPageTitle('mentions');
+        $page_meta = Page::currentPageMeta('mentions');
 
-        return view('mentions', compact('text', 'head_title'));
+        return view('mentions', compact('text', 'page_meta'));
     }
 
     public function sitemap()
     {
         $text = Page::choosePageText('sitemap');
-        $head_title = Page::currentPageTitle('sitemap');
+        $page_meta = Page::currentPageMeta('sitemap');
 
-        return view('sitemap', compact('text', 'head_title'))->with(trans('sitemap'));
+        return view('sitemap', compact('text', 'page_meta'))->with(trans('sitemap'));
     }
 
 }

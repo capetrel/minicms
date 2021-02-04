@@ -15,10 +15,10 @@ class MediasController extends Controller
     public function medias()
     {
         $text = Page::choosePageText('medias');
-        $head_title = Page::currentPageTitle('medias');
+        $page_meta = Page::currentPageMeta('medias');
         $media_from_category = Media::getMediasFromCategory();
 
-        return view('medias', compact('text', 'head_title', 'media_from_category'));
+        return view('medias', compact('text', 'page_meta', 'media_from_category'));
     }
 
     public function edit(string $page, int $id)

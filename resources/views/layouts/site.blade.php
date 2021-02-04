@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="{{ is_null($page_meta->head_meta_keywords) ? $site_meta->site_keywords : $page_meta->head_meta_keywords }}" />
+    <meta name="description" content="{{ is_null($page_meta->head_meta_description) ? $site_meta->site_description : $page_meta->head_meta_description }}" />
     <meta name="robot" content="index, follow, all"/>
 
     <link rel="shortcut icon" href="{{ asset('img/favicons/favicon.ico') }}" type="image/x-icon">
@@ -20,7 +20,7 @@
 
     @stack('css')
 
-    <title> {{ $head_title->head_title }}</title>
+    <title>{{ is_null($page_meta->head_title) ? env('APP_NAME') : $page_meta->head_title }}</title>
 
 </head>
 
