@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Session;
 
 class CategoriesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function categories()
     {
         $categories = Category::getCategories();

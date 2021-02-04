@@ -46,7 +46,7 @@ class FileController extends Controller {
     }
 
     public function postWysiwygImage(Request $request) {
-
+        dd($request->getMethod());
         $public_path = 'img/editor/images/';
 
         $validator = Validator::make($request->all(), [

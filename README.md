@@ -60,10 +60,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## TODO
 
-- [ ] Vérifier que toutes les routes admin soit couvert par le Auth middleware
-- [ ] Inclure la configuration du site dans le tableau de bord
-- [ ] remettre de l'ordre dans les assets
-- [ ] Inclure L'upload de fichier dans le wysiwyg
+- [x] Vérifier que toutes les routes admin soit couvert par le Auth middleware
+- [x] Inclure la configuration du site dans le tableau de bord
+- [x] remettre de l'ordre dans les assets
+- [x] Inclure L'upload de fichier dans le wysiwyg
 - [ ] Inclure des formats et un css pour le wysiwyg
+- [ ] Dans le backoffice, quand il y a un slug mettre en place une "slugification" automatique (js).
 - [ ] Dans le backoffice, quand il y a un slug mettre en place une "slugification" automatique (js).
 

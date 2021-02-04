@@ -12,13 +12,10 @@ use Intervention\Image\ImageManagerStatic;
 
 class MediasController extends Controller
 {
-    public function medias()
-    {
-        $text = Page::choosePageText('medias');
-        $page_meta = Page::currentPageMeta('medias');
-        $media_from_category = Media::getMediasFromCategory();
 
-        return view('medias', compact('text', 'page_meta', 'media_from_category'));
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
     public function edit(string $page, int $id)

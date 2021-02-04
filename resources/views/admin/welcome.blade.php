@@ -27,7 +27,7 @@
                             @foreach($page_content as $content)
                                 <h5 class="card-title" >Titre de la page : {!! $content->menu_name  !!}</h5>
                                 <div class="card-text">
-                                    <strong>Description de la page :</strong> {!! $content->page_meta  !!}<br>
+                                    <strong>Description de la page :</strong> {!! $content->head_title  !!}<br>
                                     {!! $content->text ? $content->text : "Il n'y a pas de textes pour cette page"  !!}
                                 </div>
                             @endforeach
