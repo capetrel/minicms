@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
     <meta name="robot" content="index, follow, all"/>
 
     <link rel="shortcut icon" href="{{ asset('img/favicons/favicon.ico') }}" type="image/x-icon">
@@ -24,41 +22,33 @@
 
 </head>
 <body>
+    <div class="wrapper">
 
-<div class="wrapper">
+        <nav>
 
-    <nav>
+            @include('blocks.leftnav')
 
-        @include('blocks.leftnav')
+        </nav>
 
-    </nav>
+        <article id="main">
 
-    <article id="main">
+            <header class="bg-primary text-white jumbotron">
+                <div class="container text-center">
+                    <h1 class="display-4">
+                        Erreur 401
+                    </h1>
+                </div>
+            </header>
 
-        <header>
-
-            <div class="custom-title">
-
-                <h1>
-                    Erreur 401
-                </h1>
-
-            </div>
-            <div class="logo">
-                <img class="img-responsive" src="{{ asset('svg/logo-duoalborada.svg') }}" alt="Logo du Duo Alborada">
+            <div class="custom-content">
+                <p><strong>Accès non autorisé.</strong></p>
             </div>
 
-        </header>
+        </article>
 
-        <div class="custom-content">
-            <p><strong>Accès non autorisé.</strong></p>
-        </div>
+    </div>
 
-    </article>
-
-</div>
-
-@include('blocks.footer')
+    @include('blocks.footer')
 
 </body>
 </html>

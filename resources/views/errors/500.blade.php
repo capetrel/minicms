@@ -5,8 +5,6 @@
     <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
     <meta name="robot" content="index, follow, all"/>
 
     <link rel="shortcut icon" href="{{ asset('img/favicons/favicon.ico') }}" type="image/x-icon">
@@ -33,19 +31,12 @@
 
     <article id="main">
 
-        <header>
-
-            <div class="custom-title">
-
-                <h1>
+        <header class="bg-primary text-white jumbotron">
+            <div class="container text-center">
+                <h1 class="display-4">
                     Erreur 500
                 </h1>
-
             </div>
-            <div class="logo">
-                <img class="img-responsive" src="{{ asset('svg/logo-duoalborada.svg') }}" alt="Logo du Duo Alborada">
-            </div>
-
         </header>
 
         <div class="custom-content">
