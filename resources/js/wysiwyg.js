@@ -1,5 +1,6 @@
 import suneditor from 'suneditor';
-import lang from 'suneditor/src/lang';
+// import lang from 'suneditor/src/lang';
+import fr from 'suneditor/src/lang/fr'
 import plugins from 'suneditor/src/plugins';
 import CodeMirror from 'codemirror'
 import 'codemirror/mode/htmlmixed/htmlmixed'
@@ -109,11 +110,11 @@ const siteStyleFormat = [
     'p', 'div', 'blockquote', 'h2', 'h3', 'h4', 'h5', 'h6'
 ]
 
-// TODO : class attribute on link
+// TODO : class attribute on link, add display empty folder when no image in imageGallery
 const editor = suneditor.create('editor', {
     width: '100%',
     height: 'auto',
-    lang: lang.fr,
+    lang: fr,
     charCounterLabel: 'Total des Caractères :',
     charCounter : true,
     plugins: {...plugins, caretPlugin, nbspPlugin, markPlugin},
@@ -123,6 +124,7 @@ const editor = suneditor.create('editor', {
     imageUploadHeader: {'X-CSRF-TOKEN':csrfToken.content},
     imageUploadUrl: '/admin/image/upload',
     imageGalleryUrl: '/admin/gallery',
+    imageUrlInput: true,
     buttonList: [
         ['removeFormat'],
         ['formatBlock', 'fontColor', 'fontSize'],
