@@ -19,11 +19,7 @@ class FileController extends Controller {
         $this->middleware('auth');
     }
 
-    public function getResizeImage()
-    {
-        return view('files.resizeimage');
-    }
-
+    /* TODO : delete
     public function postResizeImage(Request $request)
     {
 
@@ -44,9 +40,10 @@ class FileController extends Controller {
             ->with('success','Image Upload successful')
             ->with('imagename',$imagename);
     }
+    */
 
     public function postWysiwygImage(Request $request) {
-        dd($request->getMethod());
+
         $public_path = 'img/editor/images/';
 
         $validator = Validator::make($request->all(), [

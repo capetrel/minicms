@@ -38,7 +38,7 @@ class AdminController extends Controller
         return view('admin.home', compact('user_data', 'site_config', 'edit_pages'));
     }
 
-    public function show($page)
+    public function show(string $page)
     {
         $page_content = Page::getContent($page);
         $categories = Category::getCategories();
@@ -55,7 +55,7 @@ class AdminController extends Controller
         return view('admin.edit.pages', compact( 'page_content', 'page'));
     }
 
-    public function update(PagesFormRequest $request, $page)
+    public function update(PagesFormRequest $request, string $page)
     {
         $data = $request->all();
         try{

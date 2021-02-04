@@ -22,14 +22,14 @@ class CategoriesController extends Controller
         return view('categories', compact('text', 'page_meta', 'categories'));
     }
 
-    public function edit($page, $id)
+    public function edit(string $page, int $id)
     {
         $category = Category::getCategory($id);
 
         return view('admin.edit.category', compact( 'category', 'page', 'id'));
     }
 
-    public function update(CategoryFormRequest $request, $page, $id)
+    public function update(CategoryFormRequest $request, string $page, int $id)
     {
         $datas =$request->all();
 
@@ -49,12 +49,12 @@ class CategoriesController extends Controller
         }
     }
 
-    public function form($page)
+    public function form(string $page)
     {
         return view('admin.add.category', compact('page'));
     }
 
-    public function add(CategoryFormRequest $request, $page)
+    public function add(CategoryFormRequest $request, string $page)
     {
 
         $datas =$request->all();
@@ -69,7 +69,7 @@ class CategoriesController extends Controller
     }
 
 
-    public function del($page, $id)
+    public function del(string $page, int $id)
     {
         $category = Category::find($id);
         $category->delete();

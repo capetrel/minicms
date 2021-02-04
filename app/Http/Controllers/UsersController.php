@@ -13,7 +13,7 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
 
-    public function show($page, $id)
+    public function show(string $page, int $id)
     {
 
         $page_content = Page::getContent('user');
