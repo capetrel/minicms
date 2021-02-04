@@ -18,6 +18,7 @@ class CreateMediasTable extends Migration
             $table->text('media_title');
             $table->text('media_thumb')->nullable();
             $table->text('media_fullsize')->nullable();
+            $table->text('media_slug')->unique();
             $table->text('media_link')->nullable();
             $table->longText('media_description')->nullable();
             $table->date('media_date')->nullable();

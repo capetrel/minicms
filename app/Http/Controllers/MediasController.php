@@ -29,7 +29,7 @@ class MediasController extends Controller
         return view('admin.edit.media', compact( 'media', 'categories', 'cat_id', 'page', 'id'));
     }
 
-    public function update(MediaFormRequest $request, $page, $id)
+    public function update(MediaFormRequest $request, string $page, int $id)
     {
         // On récupère les données postées
         $data = $request->all();
@@ -52,7 +52,7 @@ class MediasController extends Controller
                 $this->deleteFile($old_thumb_file);
                 $this->deleteFile($old_file);
 
-                $paths = $this->fileManager($request, $cat, $data);
+                $paths = $this->fileManager($request, $cat);
 
                 $data['media_thumb'] = $paths['media_thumb'];
                 $data['media_fullsize'] = $paths['media_fullsize'];
@@ -97,7 +97,7 @@ class MediasController extends Controller
         }
     }
 
-    public function form($page, $cat)
+    public function form(string $page, string $cat)
     {
         $categories = Category::pluck('category_name', 'id')->toArray();
         $c = Category::getCategoryFromSlug($cat);
@@ -107,7 +107,7 @@ class MediasController extends Controller
         return view('admin.add.media', compact('categories', 'cat', 'page', 'category', 'category_id'));
     }
 
-    public function add(MediaFormRequest $request, $page, $cat)
+    public function add(MediaFormRequest $request, string $page, string $cat)
     {
         // On récupère les données postées
         $data = $request->all();
@@ -117,8 +117,7 @@ class MediasController extends Controller
         $data['page_id'] = $page_id->id;
 
         try{
-
-            $paths = $this->fileManager($request, $cat, $data);
+            $paths = $this->fileManager($request, $cat);
 
             $data['media_thumb'] = $paths['media_thumb'];
             $data['media_fullsize'] = $paths['media_fullsize'];
@@ -135,7 +134,7 @@ class MediasController extends Controller
 
     }
 
-    public function del($page, $id)
+    public function del(string $page, int $id)
     {
         $media = Media::find($id);
         $files = Media::getMediaFiles($id);
@@ -150,7 +149,7 @@ class MediasController extends Controller
         return redirect('admin/' . $page);
     }
 
-    private function fileManager(MediaFormRequest $request, string $cat, $data)
+    private function fileManager(MediaFormRequest $request, string $cat)
     {
         // Initialisation des variables pour les chemins de fichier et leur url
         $thumb_url = 'img'. DIRECTORY_SEPARATOR . $cat . DIRECTORY_SEPARATOR . 'thumbs';
@@ -191,7 +190,7 @@ class MediasController extends Controller
         }
     }
 
-    private function mkdirIfNotExists($dirname)
+    private function mkdirIfNotExists(string $dirname)
     {
         if (!file_exists($dirname)) {
             mkdir($dirname, 775, true);

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class PageAndMediaSeeder extends Seeder
 {
@@ -90,10 +91,12 @@ class PageAndMediaSeeder extends Seeder
         // At the end we generate content
         for($i =0; $i <= 10; $i++)
         {
+            $title = $this->faker->text(50);
             DB::table('medias')->insert([
-                'media_title' => $this->faker->text(50),
+                'media_title' => $title,
                 'media_thumb' => 'https://fakeimg.pl/200x200/',
                 'media_fullsize' => 'https://fakeimg.pl/1460x820/',
+                'media_slug' => Str::slug($title),
                 'media_link' => null,
                 'media_description' => $this->faker->realText(682),
                 'media_date' => $this->faker->date('Y-m-d'),

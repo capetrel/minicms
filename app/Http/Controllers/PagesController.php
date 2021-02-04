@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Media;
 use App\Models\Page;
+use Illuminate\Support\Str;
 
 class PagesController extends Controller
 {
@@ -23,6 +24,17 @@ class PagesController extends Controller
         $media_from_category = Media::getMediasFromCategory();
 
         return view('medias', compact('text', 'page_meta', 'media_from_category'));
+    }
+
+    public function media(string $slug)
+    {
+        $media = Media::getMediaWithCategoryFromSlug($slug);
+        $page_meta = new \stdClass();
+        $page_meta->head_title = '';
+        $page_meta->head_meta_keywords = str_replace(' ', ', ', $media->media_title);;
+        $page_meta->head_meta_description = Str::limit($media->media_description, 200, '...');
+
+        return view('show.media', compact('media', 'page_meta'));
     }
 
     public function mentions()

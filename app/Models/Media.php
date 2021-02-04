@@ -26,6 +26,7 @@ class Media extends Model
         'media_title',
         'media_thumb',
         'media_fullsize',
+        'media_slug',
         'media_link',
         'media_description',
         'media_date',
@@ -42,12 +43,14 @@ class Media extends Model
             ->pluck('category_name');
     }
 
+    /* TODO : delete
     public static function getFormMediasCategories()
     {
         return DB::table('categories')
             ->select('*')
             ->get()->toArray();
     }
+    */
 
     /**
      * @return array of collections
@@ -74,6 +77,27 @@ class Media extends Model
         return $media_from_category;
     }
 
+    public static function getMediaWithCategoryFromSlug($slug)
+    {
+        return DB::table('medias')
+            ->select(
+                'medias.id',
+                'medias.media_title',
+                'medias.media_fullsize',
+                'medias.media_slug',
+                'medias.media_link',
+                'medias.media_description',
+                'medias.media_date',
+                'medias.updated_at',
+                'medias.category_id',
+                'categories.category_name',
+                'categories.category_slug'
+            )
+            ->join('categories', 'medias.category_id', 'categories.id')
+            ->where('media_slug', 'LIKE', $slug)
+            ->first();
+    }
+
     public static function getMedia($id)
     {
         return DB::table('medias')
@@ -98,6 +122,7 @@ class Media extends Model
                 'media_title'          => $datas['media_title'],
                 'media_thumb'          => $datas['media_thumb'],
                 'media_fullsize'       => $datas['media_fullsize'],
+                'media_slug'           => $datas['media_slug'],
                 'media_link'           => $datas['media_link'],
                 'media_description'    => $datas['media_description'],
                 'media_date'           => $datas['media_date'],

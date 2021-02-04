@@ -46,7 +46,8 @@
                                 {!! Form::label('media_title', 'Nom du media') !!}<em> ( Obligatoire ) </em>
                                 {!! Form::text('media_title', $item->media_title, [
                                     'required',
-                                    'class'=>'form-control'
+                                    'class'=>'form-control',
+                                    'id'=>'mediaTitle'
                                     ])
                                 !!}
                             </div>
@@ -65,7 +66,15 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('media_link', 'Lien (Interne ou externe)') !!}
+                                {!! Form::label('media_slug', 'Url (lien intern)') !!}
+                                {!! Form::text('media_slug', $item->media_slug, [
+                                    'class'=>'form-control',
+                                    'id'=>'mediaSlug'
+                                    ]) !!}
+                            </div>
+
+                            <div class="form-group">
+                                {!! Form::label('media_link', 'Lien (externe)') !!}
                                 {!! Form::text('media_link', $item->media_link, ['class'=>'form-control']) !!}
                             </div>
 

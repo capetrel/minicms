@@ -21,7 +21,7 @@
             <div class="slider slider-{{ Str::slug($cat) }}">
                 @foreach($media_from_category[$cat] as $media)
                     <div class="slide">
-                        <a href="{{ is_null($media->media_link) ? '#' : $media->media_link }}" class="slide_link {{ is_null($media->media_link) ? '' : "has-link" }}" target="_blank">
+                        <a href="{{ is_null($media->media_link) ? route('media', ['slug' => $media->media_slug]) : $media->media_link }}" class="slide_link {{ is_null($media->media_link) ? '' : "has-link" }}"  target="{{ is_null($media->media_link) ? '_self' : "_blank" }}">
                             <div class="img">
                                 <img id="imgSrc" src="{{ asset($media->media_thumb) }}" alt="{{ $media->media_title }}">
                             </div>

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'index'])->name('home');
 Route::get('presentation', [PagesController::class, 'index'])->name('home');
 Route::get('medias', [PagesController::class, 'medias'])->name('medias');
+Route::get('/media/{slug}', [PagesController::class, 'media'])->where('slug', '[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*')->name('media');
 Route::get('contact', [ContactController::class, 'contact'])->name('contact');
 Route::post('contact', [ContactController::class, 'contact'])->name('contact.post');
 Route::get('mentions', [PagesController::class, 'mentions'])->name('mentions');
