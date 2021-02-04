@@ -1,36 +1,29 @@
-import Siema from 'siema';
+import { tns } from "../../node_modules/tiny-slider/src/tiny-slider"
 
-function setParams(selector){
-    return {
-        selector: selector,
-        duration: 200,
-        easing: 'ease-out',
-        perPage: {
-            740: 1,
-            800: 2,
-            1240: 3
-        },
-        startIndex: 0,
-        draggable: true,
-        threshold: 20,
-        loop: false,
-        rtl: false,
-    };
-}
+let sliders = document.querySelectorAll('.slider').forEach(function (element){
+    let slider = tns({
+        container: element,
+        items: 1,
+        slideBy: 'page',
+        center: true,
+        controlsPosition: 'bottom',
+        controlsText: ['<', '>'],
+        navPosition: "bottom",
+        responsive: {
+            640: {
+                edgePadding: 20,
+                gutter: 20,
+                items: 2
+            },
+            700: {
+                gutter: 30
+            },
+            900: {
+                items: 3
+            }
+        }
+    });
+})
 
-function setSiema(suffix){
-    try {
-        let siema = new Siema(setParams('.siema-' + suffix));
-        document.querySelector('.prev-' + suffix).addEventListener('click', () => siema.prev());
-        document.querySelector('.next-' + suffix).addEventListener('click', () => siema.next());
-        return siema;
-    } catch (e) {
-        // throw 'Un diaporama est vide';
-    }
 
-}
 
-setSiema('videos');
-setSiema('presses');
-setSiema('galerie');
-setSiema('discographie');

@@ -64,6 +64,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - [x] remettre de l'ordre dans les assets
 - [x] Inclure L'upload de fichier dans le wysiwyg
 - [x] Inclure des formats et un css pour le wysiwyg
-- [ ] Ajouter des slider pour la page médias
+- [x] Ajouter des slider pour la page médias
 - [ ] Dans le backoffice, quand il y a un slug mettre en place une "slugification" automatique (js).
 

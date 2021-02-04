@@ -3,7 +3,11 @@
 @section('content')
 
     @push('css')
-        <link rel="stylesheet" href="{{ asset('css/slider.min.css') }}">
+        @if (env('APP_ENV') === 'local')
+            <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
+        @else
+            <link rel="stylesheet" href="{{ asset('css/slider.min.css') }}">
+        @endif
     @endpush
 
     <div class="formated-content">
@@ -12,23 +16,18 @@
 
     @foreach($media_from_category as $cat=>$media)
 
-        <div class="around-title">
+        <div class="media-section">
             <h2>{{ $cat }}</h2>
-            <div class="siema-{{ Str::slug($cat) }}">
+            <div class="slider slider-{{ Str::slug($cat) }}">
                 @foreach($media_from_category[$cat] as $media)
-                    <!-- TODO revoir cette condition une balise a sans href c'est bof -->
-                    <div class="slide ih-item square effect6 from_top_and_bottom">
-                        @if($media->media_link)
-                            <a href="{{ $media->media_link }}" target="_blank">
-                        @else
-                            <a class="work"> <!-- href=" asset($media->media_fullsize) " -->
-                        @endif
+                    <div class="slide">
+                        <a href="{{ is_null($media->media_link) ? '#' : $media->media_link }}" class="slide_link {{ is_null($media->media_link) ? '' : "has-link" }}" target="_blank">
                             <div class="img">
                                 <img id="imgSrc" src="{{ asset($media->media_thumb) }}" alt="{{ $media->media_title }}">
                             </div>
                             <div class="info">
                                 <h3 id="imgTitle">{{ $media->media_title }}</h3>
-                                <p id="imgDesc" class="portfolio-desc">{{ $media->media_description }}</p>
+                                <p id="imgDesc" class="desc">{{ Str::limit($media->media_description, 100, '...') }}</p>
                             </div>
                         </a>
                     </div>
@@ -36,30 +35,21 @@
 
             </div>
         </div>
-
-        @if(count((array)$media) > 1)
-            <div class="btn-center">
-                <button class="prev-{{ Str::slug($cat) }} btn-slider"><</button>
-                <button class="next-{{ Str::slug($cat) }} btn-slider">></button>
-            </div>
-        @else
-            <div class="bnt-center">
-                <p>Cette section est vide pour l'instant.</p>
-            </div>
-        @endif
-
     @endforeach
 
     <div id="modal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
+        <img src="" class="modal-content" id="modalImg">
         <h3 id="modalTitle"></h3>
         <div id="modalDesc"></div>
     </div>
 
     @push('scripts')
-        <script src="{{ asset('js/vendor/siema.min.js') }}"></script>
-        <script src="{{ asset('js/slider.min.js') }}"></script>
+        @if (env('APP_ENV') === 'local')
+            <script src="{{ asset('js/slider.js') }}"></script>
+        @else
+            <script src="{{ asset('js/slider.min.js') }}"></script>
+        @endif
     @endpush
 
 @endsection
