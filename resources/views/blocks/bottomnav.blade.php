@@ -8,7 +8,7 @@
     @endforeach
     @auth
         <li class="list-inline-item">
-            <a href="{{ route('admin') }}">Acceuil</a>
+            <a href="{{ route('admin') }}">Admin</a>
         </li>
     @else
         <li class="list-inline-item">
