@@ -80,7 +80,7 @@
 
                             <div class="form-group">
                                 {!! Form::submit('Enregistrer', ['class'=>'btn btn-primary']) !!}
-                                <a class="btn btn-secondary" title="retour à la page précédente" href="{{ route('page', ['page'  => '/admin']) }}">Annuler</a>
+                                <a class="btn btn-secondary" title="retour à la page précédente" href="/admin">Annuler</a>
                             </div>
 
                         @endforeach
