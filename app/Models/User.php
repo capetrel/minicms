@@ -50,4 +50,16 @@ class User extends Authenticatable
             ->where('id', $id)
             ->first();
     }
+
+    public static function updateUser($data, $id)
+    {
+        return DB::table('users')
+            ->where('id', $id)
+            ->update([
+                'firstname'  => $data['firstname'],
+                'lastname'   => $data['lastname'],
+                'name'       => $data['name'],
+                'email'      => $data['email'],
+            ]);
+    }
 }

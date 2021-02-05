@@ -33,6 +33,10 @@ Route::get('/admin/gallery', [FileController::class, 'gallery']);
 Route::get('/admin/edit-config', [ConfigsController::class, 'edit'])->name('edit-config');
 Route::post('/admin/update-config', [ConfigsController::class, 'update'])->name('update-config');
 
+/* CRUD for users */
+Route::get('/admin/edit-user/{id}', [UsersController::class, 'show'])->where('id', '[0-9]+')->name('edit-user');
+Route::post('/admin/update-user/{id}', [UsersController::class, 'update'])->where('id', '[0-9]+')->name('update-user');
+
 // Route pour le CRUD de l'administration (contenu des pages)
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/{page}', [AdminController::class, 'show'])->name('page');
@@ -52,7 +56,3 @@ Route::post('/admin/{page}/update-cat/{id}', [CategoriesController::class, 'upda
 Route::get('/admin/{page}/add/cat', [CategoriesController::class, 'form'])->name('add-cat');
 Route::post('/admin/{page}/add/cat', [CategoriesController::class, 'add'])->name('save-cat');
 Route::post('/admin/{page}/del/cat/{id}', [CategoriesController::class, 'del'])->where('id', '[0-9]+')->name('del-cat');
-
-/* CRUD for users */
-Route::get('/admin/{page}/edit-user/{id}', [UsersController::class, 'show'])->where('id', '[0-9]+')->name('edit-user');
-Route::post('/admin/{page}/update-user/{id}', [UsersController::class, 'update'])->where('id', '[0-9]+')->name('update-user');
