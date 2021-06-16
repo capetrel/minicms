@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         /*
-         * $left_menu = Page::getMenu('left');
+        $left_menu = Page::getMenu('left');
         $bottom_menu = Page::getMenu('bottom');
         $right_menu = Page::getMenu('right');
         $site_meta = Config::getSiteMeta(1);
